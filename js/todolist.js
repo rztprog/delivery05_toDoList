@@ -3,6 +3,7 @@
 ////////// VARIABLES /////////
 //////////////////////////////
 
+
 // A SUPPR
 const body = document.getElementsByTagName("body")[0];
 
@@ -27,7 +28,10 @@ var ulwrapper = new Vue({
 	},
 	methods: {
 		addItem: function() {
-			return this.toDoList.push("");	
+			return this.toDoList.push("data.value");
+		},
+		isEmpty: function() {
+		
 		}
 	}
 })
