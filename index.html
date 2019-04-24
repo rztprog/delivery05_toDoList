@@ -11,14 +11,20 @@
 	</head>
 	<body>
 		<header class="header">
+			<h1 class="title">Shopping List</h1>
 		</header>
 		<main class="main">
-		<form class="form">
-			<input type="text" size="30" placeholder="Tomatos" class="data" autofocus />
-			<input type="button" class="addButton" value="Add-in" />
-		</form>
+		<div>
+			<input type="text" size="30" placeholder="Tomatos" class="data" autofocus v-on:keyup.enter="addItem()" />
+			<input type="button" class="addButton" value="Add-in" v-on:click="addItem()" />
+		</div>
 		<div class="ulwrapper">
 			<ul class="ul">
+				<todo-item 
+       				v-for="item in toDoList"
+	   			v-bind:todo="item"
+	   			v-bind:key="item.id"
+				></todo-item>
 			</ul>
 		</div>
 		</main>
