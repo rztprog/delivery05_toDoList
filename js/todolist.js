@@ -27,7 +27,7 @@ var ulwrapper = new Vue({
 	},
 	methods: {
 		addItem: function() {
-			return this.toDoList.push("{id: 0, text:'test' }");	
+			return this.toDoList.push("");	
 		}
 	}
 })
