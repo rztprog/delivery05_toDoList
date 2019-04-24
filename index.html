@@ -5,18 +5,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
-		<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.css" /> <!-- PaperCSS FW -->
+		<!-- <link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.css" /> <1!-- PaperCSS FW --1> -->
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<title>Vue.JS toDoList</title>
 	</head>
 	<body>
-		<header>
+		<header class="header">
 		</header>
-		<main>
+		<main class="main">
+		<form class="form">
+			<input type="text" size="30" placeholder="Tomatos" class="data" autofocus />
+			<input type="button" class="addButton" value="Add-in" />
+		</form>
+		<div class="ulwrapper">
+			<ul class="ul">
+			</ul>
+		</div>
 		</main>
 		<footer>
 		</footer>
-		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!-- VueJS -->
-		<script src="js/script.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!-- VueJS FW -->
+		<script src="js/todolist.js"></script>
 	</body>
 </html>
