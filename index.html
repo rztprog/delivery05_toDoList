@@ -20,19 +20,19 @@
 					maxlength="30"
 					placeholder="Tomatos"
 					class="addInput dark"
-					v-on:keyup.enter="addItem()" 
+					@keyup.enter="addItem()" 
      					v-model="inputfield"
 					autofocus
 					/>
 					<input type="button"
 					class="addButton btn-primary"
 					value="Add-in"
-					v-on:click="addItem()"
+					@click="addItem()"
 					/>
 					<input type="button"
 					class="clearButton btn-secondary"
 					value="Clear"
-					v-on:click="clearList()"
+					@click="clearList()"
 					/>
 				</div>
     				<div class="ulWrapper">
