@@ -16,15 +16,19 @@
 		<main class="main">
 		</div>
 		<div class="ulwrapper">
-			<input type="text" size="30" placeholder="Tomatos" class="data" autofocus v-on:keyup.enter="addItem()" />
-			<input type="button" class="addButton" value="Add-in" v-on:click="addItem()" />
-			<ul class="ul">
-				<todo-item 
-       				v-for="item in toDoList"
-	   			v-bind:todo="item"
-	   			v-bind:key="item.id"
-				></todo-item>
-			</ul>
+			<div class="fieldwrapper">
+				<input type="text" size="30" placeholder="Tomatos" class="data" autofocus v-on:keyup.enter="addItem()" />
+				<input type="button" class="addButton btn-primary" value="Add-in" v-on:click="addItem()" />
+			</div>
+			<div class="listwrapper">
+				<ul class="ul">
+					<todo-item 
+					v-for="item in toDoList"
+					v-bind:todo="item"
+					v-bind:key="item.id"
+					></todo-item>
+				</ul>
+			</div>
 		</div>
 		</main>
 		<footer>
