@@ -7,6 +7,11 @@
 	justify-content: center;
 }
 
+.header{
+	font-size: 4em;
+	margin-bottom: 0.5em;
+}
+
 .data{
 	background: #888;
 }
