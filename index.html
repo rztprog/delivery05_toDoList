@@ -9,7 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<title>Vue.JS toDoList</title>
 	</head>
-	<body>
+	<body class="light">
 		<header class="header">
 			<h1 class="title">Sh<span class="darkmodebutton" v-on:click="">o</span>pping List</h1>
 		</header>
@@ -19,7 +19,7 @@
 					<input type="text"
 					maxlength="30"
 					placeholder="Tomatos"
-					class="addInput"
+					class="addInput dark"
 					v-on:keyup.enter="addItem()" 
      					v-model="inputfield"
 					autofocus
