@@ -17,12 +17,13 @@ var main = new Vue({
 	methods: {
 		addItem: function() {
 			if(this.inputfield == "") {
-				return
+				return;
 				// return redField();
 			}else{
 				for(let item of this.toDoList){
-					if(item == this.inputfield){
-						console.log("FOUND");
+					if(item.text === this.inputfield){
+						this.inputfield = "";
+						return;
 					}
 				}
 				this.toDoList.push({ text: this.inputfield });
@@ -45,6 +46,5 @@ var header = new Vue({
 	data: {
 		isDark: true,
 	}
-
 });
 
