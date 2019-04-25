@@ -7,7 +7,29 @@
 ////////// FUNCTION //////////
 //////////////////////////////
 
+var main = new Vue({
+	el: '.main',
+	data: {
+		toDoList: [],
+		inputfield: "",
+	},
+	methods: {
 
+		addItem: function() {
+			this.toDoList.push({ text: this.inputfield });
+			this.inputfield = "";
+		}
+	}
+
+});
+
+var header = new Vue({
+	el: '.header',
+	data: {
+		isDark: true,
+	}
+
+});
 
 
 // Vue.component('todo-item', {
