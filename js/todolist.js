@@ -4,13 +4,6 @@
 //////////////////////////////
 
 
-// A SUPPR
-const body = document.getElementsByTagName("body")[0];
-
-body.style.backgroundColor = "#222222";
-body.style.color = "#FFF";
-
-
 ////////// FUNCTION //////////
 //////////////////////////////
 
@@ -21,17 +14,36 @@ Vue.component('todo-item', {
 })
 
 var ulwrapper = new Vue({
-	el: ".ulwrapper",
+	el: '.ulwrapper',
 	data: {
 		toDoList: [
-		]
+		],
+		value: ""
 	},
 	methods: {
 		addItem: function() {
-			return this.toDoList.push("{ " +  "data.value" + " }");
+			this.toDoList.push({ text: this.value });
+			this.value = "";
 		},
 		isEmpty: function() {
+
+		},
+		redField: function() {
 		
 		}
+	}
+})
+
+var darkmode = new Vue({
+	el: '.body',
+	data: {
+		islight: false,
+		isdark: true
+	},
+	methods: {
+		interuptor: function(){
+			this.islight = !this.isligth;
+			this.isdark = !this.isdark;
+		}	
 	}
 })
