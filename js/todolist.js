@@ -24,14 +24,25 @@ var main = new Vue({
 					if(item.text === this.inputfield){
 						this.inputfield = "";
 						return;
+						// return redField();
 					}
 				}
+				
+				upperCase();
 				this.toDoList.push({ text: this.inputfield });
 				this.inputfield = "";
 			}
 		},
 		clearList: function() {
-			this.toDoList = [];
+			if (this.toDoList.length == 0){
+				return;
+			} else if (confirm("Are you sure ?")){
+				this.toDoList = [];
+			}
+		},
+		upperCase: function () {
+			this.inputfield = this.inputfield.split("");
+			return this.inputfield = this.inputfield[0].toUpperCase() + this.inputfield.splice(1).join("");
 		},
 		redField: function() {
 		
