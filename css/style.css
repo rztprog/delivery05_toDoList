@@ -21,11 +21,11 @@
 }
 
 .dark{
-	background-color: #222;
+	background-color: #333;
 	color: #FFF;
 }
 
-/* .light{ */
-/* 	background-color: #FFF; */
-/* 	color: #111; */
-/* } */
+.light{
+	background-color: #FFF;
+	color: #222;
+}
