@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
-		<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" /> <!-- PaperCSS FW -->
+		<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" /> <!-- PaperCSS PROD FW -->
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<title>Vue.JS toDoList</title>
 	</head>
@@ -15,26 +15,39 @@
 			<h1 class="title">Sh<span class="darkmodebutton" v-on:click="interuptor()">o</span>pping List</h1>
 		</header>
 		<main class="main">
-		</div>
-		<div class="ulwrapper">
-			<div class="fieldwrapper">
-				<input type="text" maxlength="30" placeholder="Tomatos" class="data" autofocus  v-on:keyup.enter="addItem()" v-model="value"/>
-				<input type="button" class="addButton btn-primary" value="Add-in" v-on:click="addItem()" />
-			</div>
-			<div class="listwrapper">
-				<ul class="ul">
-					<todo-item 
-					v-for="item in toDoList"
-					v-bind:todo="item"
-					v-bind:key="item.id"
-					></todo-item>
-				</ul>
-			</div>
-		</div>
+
+
+
+		<!-- </div> -->
+		<!-- <div class="ulwrapper"> -->
+		<!-- 	<div class="fieldwrapper"> -->
+		<!-- 		<input --> 
+		<!-- 		type="text" --> 
+		<!-- 		maxlength="30" --> 
+		<!-- 		placeholder="Tomatos" --> 
+		<!-- 		class="data" autofocus -->  
+		<!-- 		v-on:keyup.enter="addItem()" --> 
+		<!-- 		v-model="value"/> -->
+		<!-- 		<input --> 
+		<!-- 		type="button" --> 
+		<!-- 		class="addButton btn-primary" --> 
+		<!-- 		value="Add-in" --> 
+		<!-- 		v-on:click="addItem()" /> -->
+		<!-- 	</div> -->
+		<!-- 	<div class="listwrapper"> -->
+		<!-- 		<ul class="ul"> -->
+		<!-- 			<todo-item --> 
+		<!-- 			v-for="item in toDoList" -->
+		<!-- 			v-bind:todo="item" -->
+		<!-- 			v-bind:key="item.id" -->
+		<!-- 			></todo-item> -->
+		<!-- 		</ul> -->
+		<!-- 	</div> -->
+		<!-- </div> -->
 		</main>
 		<footer>
 		</footer>
-		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!-- VueJS FW -->
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!-- VueJS DEV FW -->
 		<script src="js/todolist.js"></script>
 	</body>
 </html>
