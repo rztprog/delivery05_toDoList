@@ -30,14 +30,14 @@ var main = new Vue({
 				}
 				
 				this.toDoList.push({ text: this.inputfield });
-				this.inputfield = "";
+				return this.inputfield = "";
 			}
 		},
 		clearList: function() {
 			if (this.toDoList.length === 0){
 				return;
 			} else if (confirm("Are you sure ?")){
-				this.toDoList = [];
+				return this.toDoList = [];
 			}
 		},
 		upperCase: function() {
@@ -49,7 +49,6 @@ var main = new Vue({
 			// return setTimeout( () => datastyle.backgroundColor = (i==0) ? "rgba(170, 170, 170, 0.9)" : "rgba(230, 230, 230, 0.9)", 500);
 		},
 	}
-
 });
 
 var header = new Vue({
