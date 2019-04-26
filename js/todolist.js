@@ -16,10 +16,11 @@ var main = new Vue({
 	},
 	methods: {
 		addItem: function() {
-			if(this.inputfield == "") {
+			if(this.inputfield === "") {
 				return;
 				// return redField();
 			}else{
+				this.upperCase();
 				for(let item of this.toDoList){
 					if(item.text === this.inputfield){
 						this.inputfield = "";
@@ -28,19 +29,18 @@ var main = new Vue({
 					}
 				}
 				
-				upperCase();
 				this.toDoList.push({ text: this.inputfield });
 				this.inputfield = "";
 			}
 		},
 		clearList: function() {
-			if (this.toDoList.length == 0){
+			if (this.toDoList.length === 0){
 				return;
 			} else if (confirm("Are you sure ?")){
 				this.toDoList = [];
 			}
 		},
-		upperCase: function () {
+		upperCase: function() {
 			this.inputfield = this.inputfield.split("");
 			return this.inputfield = this.inputfield[0].toUpperCase() + this.inputfield.splice(1).join("");
 		},
@@ -55,7 +55,7 @@ var main = new Vue({
 var header = new Vue({
 	el: '.header',
 	data: {
-		isDark: true,
+		isDark: false,
 	}
 });
 
