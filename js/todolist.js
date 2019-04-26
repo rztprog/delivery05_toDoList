@@ -7,14 +7,15 @@
 ////////// FUNCTION //////////
 //////////////////////////////
 
-var main = new Vue({
+
+var page = new Vue({
 	el: '.page',
 	data: {
 		toDoList: [],
 		inputfield: "",
 		isDark: false,
-		lightClass: 'light',
-		darkClass: 'dark'
+		activeLight: 'light',
+		activeDark: 'dark',
 	},
 	methods: {
 		addItem: function() {
@@ -50,6 +51,13 @@ var main = new Vue({
 			// datastyle.backgroundColor = "rgb(255, 55, 55)";
 			// return setTimeout( () => datastyle.backgroundColor = (i==0) ? "rgba(170, 170, 170, 0.9)" : "rgba(230, 230, 230, 0.9)", 500);
 		},
+		darkMode: function() {
+			if(this.isDark == true){
+				return this.isDark = false;
+			} else{
+				return this.isDark = true;
+			}
+		}
 	}
 });
 

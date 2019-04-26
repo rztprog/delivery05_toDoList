@@ -9,11 +9,12 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<title>Vue.JS toDoList</title>
 	</head>
-	<body class="light">
+	<body>
+		<div class="page" :class="[ isDark ? activeDark : activeLight ]">
 		<header class="header">
-			<h1 class="title">Sh<span class="darkmodebutton" v-on:click="">o</span>pping List</h1>
+			<h1 class="title">Sh<span class="darkmodebutton" @click="darkMode()">o</span>pping List</h1>
 		</header>
-		<main class="main">
+		<main>
 			<div class="listWrapper">
 				<div class="buttonWrapper">
 					<input type="text"
@@ -44,7 +45,8 @@
 				</div>
 			</div>
 		</main>
-		<footer>
+		</div>
+		<footer class="footer">
 		</footer>
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!-- VueJS DEV FW -->
 		<script src="js/todolist.js"></script>
