@@ -16,6 +16,10 @@
 	cursor: pointer;
 }
 
+.darkmodebutton:hover{
+	color: #888;
+}
+
 .dark{
 	background-color: #333;
 	color: #FFF;
