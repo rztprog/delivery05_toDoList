@@ -1,4 +1,4 @@
-![todolist icon](./img/todo.png)
+![todolist icon](./img/nop.png)
 
 # TODO List
 
