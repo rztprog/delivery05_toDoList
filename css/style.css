@@ -27,6 +27,7 @@ body{
 }
 
 .darkmodebutton{
+	color: red;
 	cursor: pointer;
 }
 
