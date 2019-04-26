@@ -8,11 +8,13 @@
 //////////////////////////////
 
 var main = new Vue({
-	el: '.main',
+	el: '.page',
 	data: {
 		toDoList: [],
 		inputfield: "",
 		isDark: false,
+		lightClass: 'light',
+		darkClass: 'dark'
 	},
 	methods: {
 		addItem: function() {
@@ -48,13 +50,6 @@ var main = new Vue({
 			// datastyle.backgroundColor = "rgb(255, 55, 55)";
 			// return setTimeout( () => datastyle.backgroundColor = (i==0) ? "rgba(170, 170, 170, 0.9)" : "rgba(230, 230, 230, 0.9)", 500);
 		},
-	}
-});
-
-var header = new Vue({
-	el: '.header',
-	data: {
-		isDark: false,
 	}
 });
 
