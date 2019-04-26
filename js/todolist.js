@@ -45,8 +45,8 @@ var main = new Vue({
 			return this.inputfield = this.inputfield[0].toUpperCase() + this.inputfield.splice(1).join("");
 		},
 		redField: function() {
-		
-		//	return setTimeout( () => (isDark) ? "rgba(170, 170, 170, 0.9)" : "rgba(230, 230, 230, 0.9)", 500);
+			// datastyle.backgroundColor = "rgb(255, 55, 55)";
+			// return setTimeout( () => datastyle.backgroundColor = (i==0) ? "rgba(170, 170, 170, 0.9)" : "rgba(230, 230, 230, 0.9)", 500);
 		},
 	}
 
