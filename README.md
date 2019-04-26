@@ -13,12 +13,12 @@ Make a toDoList with Vue JS Framework & PaperCSS Framework
 * Uppercase each first letter ✅
 * Better style (css) ✅
 * Clear item with confirm window ✅
+* Darkmode live ✅ 
+* Red input when error ✅ 
 
 ## Next Features
 
-* Darkmode live 
 * Crossed/Checked item
-* Red input when error
 * Delete item 
 
 ## Special thanks to
