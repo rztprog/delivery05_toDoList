@@ -14,21 +14,22 @@ var page = new Vue({
 		toDoList: [],
 		inputfield: "",
 		isDark: false,
+		hasError: false,
 		activeLight: 'light',
 		activeDark: 'dark',
 	},
 	methods: {
 		addItem: function() {
 			if(this.inputfield === "") {
-				return;
-				// return redField();
+				// return;
+				return this.redField();
 			}else{
 				this.upperCase();
 				for(let item of this.toDoList){
 					if(item.text === this.inputfield){
 						this.inputfield = "";
-						return;
-						// return redField();
+						// return;
+						return this.redField();
 					}
 				}
 				
@@ -48,8 +49,8 @@ var page = new Vue({
 			return this.inputfield = this.inputfield[0].toUpperCase() + this.inputfield.splice(1).join("");
 		},
 		redField: function() {
-			// datastyle.backgroundColor = "rgb(255, 55, 55)";
-			// return setTimeout( () => datastyle.backgroundColor = (i==0) ? "rgba(170, 170, 170, 0.9)" : "rgba(230, 230, 230, 0.9)", 500);
+			this.hasError = true;
+			return setTimeout( () => this.hasError = false, 400);
 		},
 		darkMode: function() {
 			if(this.isDark == true){

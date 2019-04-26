@@ -21,6 +21,7 @@
 					maxlength="30"
 					placeholder="Tomatos"
 					class="dark"
+     					:class="{ redBg : hasError }"
 					@keyup.enter="addItem()" 
      					v-model="inputfield"
 					autofocus
