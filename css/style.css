@@ -14,11 +14,40 @@ body{
 
 /***************************/
 
+
+/* Reset PaperCSS behavior */
+/***************************/
+
+a{
+	background-image: none;
+}
+
+/***************************/
+
 .header,
 .buttonWrapper,
-.ulWrapper{
+.ulWrapper,
+.socialList,
+.li{
 	display: flex;
 	justify-content: center;
+	align-items: center;
+}
+
+.li{
+	justify-content: flex-start;
+}
+
+.line{
+	text-decoration: line-through;
+}
+
+input[type="checkbox"]{
+	margin-right: 15px;
+}
+
+input{
+	margin: 0 5px 0 5px;
 }
 
 .header{
@@ -27,7 +56,7 @@ body{
 }
 
 .darkmodebutton{
-	color: red;
+	color: #F00;
 	cursor: pointer;
 }
 
@@ -46,6 +75,15 @@ body{
 }
 
 .redBg{
-	background-color: rgba(255, 55, 55, 0.9);
+	background-color: #F44;
 }
 
+.socialList-logo{
+	margin: 10px;
+	width: 50px;
+}
+
+.copyr{
+	text-align: center;
+	font-size: 0.8em;
+}

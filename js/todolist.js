@@ -14,7 +14,9 @@ var page = new Vue({
 		toDoList: [],
 		inputfield: "",
 		isDark: false,
+		isChecked: false,
 		hasError: false,
+		activeLine: 'line',
 		activeLight: 'light',
 		activeDark: 'dark',
 	},
@@ -58,7 +60,14 @@ var page = new Vue({
 			} else{
 				return this.isDark = true;
 			}
-		}
+		},
+		checked: function() {
+			if(this.isChecked == true){
+				return this.isChecked = false;
+			} else{
+				return this.isChecked = true;
+			}
+		},
 	}
 });
 

@@ -14,41 +14,62 @@
 		<header class="header">
 			<h1 class="title">Sh<span class="darkmodebutton" @click="darkMode()">o</span>pping List</h1>
 		</header>
-		<main>
+		<main class="main">
 			<div class="listWrapper">
 				<div class="buttonWrapper">
 					<input type="text"
 					maxlength="30"
 					placeholder="Tomatos"
 					class="dark"
-     					:class="{ redBg : hasError }"
+     					:class="[{ redBg : hasError }, isDark ? activeLight : activeDark ]"
 					@keyup.enter="addItem()" 
      					v-model="inputfield"
 					autofocus
 					/>
 					<input type="button"
-					class="addButton btn-primary"
+					class="btn-primary"
 					value="Add-in"
 					@click="addItem()"
 					/>
 					<input type="button"
-					class="clearButton btn-secondary"
+					class="btn-secondary"
 					value="Clear"
 					@click="clearList()"
 					/>
 				</div>
     				<div class="ulWrapper">
 		    			<ul>
-						<li v-for="item in toDoList">
+						<li v-for="item in toDoList" class="li" :class="[isChecked ? activeLine : '']">
+							<input 
+				   			@click="checked()"
+							type="checkbox"
+							/> 
 							{{ item.text }}
 						</li>
 		    			</ul>
 				</div>
 			</div>
 		</main>
-		</div>
 		<footer class="footer">
+			<div class="socialList">
+				<a href="https://github.com/rztprog">
+					<img class="socialList-logo social List-fb" src="./img/facebook-logo.svg" alt="facebook social logo" />
+				</a>
+				<a href="https://www.linkedin.com/in/luc-broion/">
+					<img class="socialList-logo socialList-lk" src="./img/linkedin-logo.svg" alt="linkedin logo">
+				</a>
+				<a href="https://twitter.com/">
+					<img class="socialList-logo socialList-tw" src="./img/twitter-logo.svg" alt="twitter logo">
+				</a>
+				<a href="https://www.codewars.com/users/rztprog">
+					<img class="socialList-logo socialList-cw" src="./img/codewars.svg" alt="codewars logo">
+				</a>
+			</div>
+			<div>
+				<p class="copyr">Copyright RZTPROG 2018 | MIT Licence</p>
+			</div>
 		</footer>
+		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!-- VueJS DEV FW -->
 		<script src="js/todolist.js"></script>
 	</body>
